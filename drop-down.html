@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            margin: 50px 0 30px;
+            text-align: center;
+            color: rgb(20, 94, 119);
+        }
+        .drop-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .drop {
+            background-color: transparent;
+            border: 1px solid #9fa4a8;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.8s ease;
+        }
+        .drop.active {
+            background-color: #fff;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+        .drop.active::before, 
+        .drop.active::after {
+            content: '\1F4ac';
+            font-family: 'Roboto', sans-serif;
+            color: #2ecc71;
+            font-size: 5rem;
+            position: absolute;
+            opacity: 0.1;
+            top: 30px;
+            left: 20px;
+            z-index: 0;
+        }
+        .drop.active::before {
+            color: #3498db;
+            top: -10px;
+            left: -5px;
+            /* transform: rotateY('180deg'); */
+        }
+        .drop-title {
+            margin: 0 30px 0px 0;
+            font-size: 20px;
+            font-weight: bold;
+        }
+  
+        .drop-text {
+            display: none;
+            margin: 30px 0 0 ; 
+        }
+        .drop.active .drop-text {
+            display: block;
+        }
+        .drop-toggle {
+            background-color: transparent;
+            border: 0;
+            border-radius: 50%;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            padding: 0;
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+        }
+        .drop-toggle:focus {
+            outline: 0;
+        }
+        .drop-toggle .bi-x-circle-fill {
+            display: none;
+        }
+        .drop.active .drop-toggle .bi-x-circle-fill {
+            display: block;
+        }
+        .drop.active .drop-toggle .bi-chevron-down {
+            display: none;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Frequently  Asked Questions</h1>
+        <div class="drop-container">
+            <!-- Drop-Wrapper -->
+            <div class="drop active">
+                <h3 class="drop-title">
+                    Why should we trust atoms?
+                </h3>
+
+                <!-- Drop-down-text -->
+                <p class="drop-text">
+                    They make up everything <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet suscipit officia corrupti cum id. Odio vero alias delectus pariatur odit! Quis, at odit temporibus architecto dolorum est fugit nostrum consectetur.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi impedit praesentium debitis quaerat, doloribus molestiae possimus labore velit quas distinctio illum quo dignissimos animi non sint beatae. Impedit, delectus temporibus!
+                </p>
+
+                <!-- Drop-down-toggle -->
+                <button class="drop-toggle">
+                    <i class="bi bi-chevron-down fs-3"></i>
+                    <i class="bi bi-x-circle-fill fs-3 text-danger"></i>
+                </button>
+            </div>
+
+            <!-- Drop-Wrapper -->
+            <div class="drop">
+                <h3 class="drop-title">
+                    What do you call someone with no body and no nose?
+                </h3>
+
+                <!-- Drop-down-text -->
+                <p class="drop-text">
+                    Nobody Knows
+                </p>
+
+                <!-- Drop-down-toggle -->
+                <button class="drop-toggle">
+                    <i class="bi bi-chevron-down fs-3"></i>
+                    <i class="bi bi-x-circle-fill fs-3 text-danger"></i>
+                </button>
+            </div>
+
+            <!-- Drop-Wrapper -->
+            <div class="drop">
+                <h3 class="drop-title">
+                    What is the object-oriented way to become wealthy?
+                </h3>
+
+                <!-- Drop-down-text -->
+                <p class="drop-text">
+                    Inheritance
+                </p>
+
+                <!-- Drop-down-toggle -->
+                <button class="drop-toggle">
+                    <i class="bi bi-chevron-down fs-3 "></i>
+                    <i class="bi bi-x-circle-fill fs-3 text-danger"></i>
+                </button>
+            </div>
+
+            <!-- Drop-Wrapper -->
+            <div class="drop">
+                <h3 class="drop-title">
+                    How many tickles does it take to tackle an octopus?
+                </h3>
+
+                <!-- Drop-down-text -->
+                <p class="drop-text">
+                    Ten-tickles!
+                </p>
+
+                <!-- Drop-down-toggle -->
+                <button class="drop-toggle">
+                    <i class="bi bi-chevron-down fs-3"></i>
+                    <i class="bi bi-x-circle-fill fs-3 text-danger"></i>
+                </button>
+            </div>
+
+            <!-- Drop-Wrapper -->
+            <div class="drop">
+                <h3 class="drop-title">
+                    What is 1+1 ?
+                </h3>
+
+                <!-- Drop-down-text -->
+                <p class="drop-text">
+                    Depends on who you are asking
+                </p>
+
+                <!-- Drop-down-toggle -->
+                <button class="drop-toggle">
+                    <i class="bi bi-chevron-down fs-3"></i>
+                    <i class="bi bi-x-circle-fill fs-3 text-danger"></i>
+                </button>
+            </div>
+            
+        </div>
+    </section>
+    
+</body>
+<script>
+    const toggles = document.querySelectorAll('.drop-toggle');
+
+    toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            toggle.parentNode.classList.toggle('active')
+        })
+    });
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</html>
